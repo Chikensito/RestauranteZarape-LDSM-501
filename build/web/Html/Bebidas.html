@@ -1,0 +1,33 @@
+<div class="container">
+    
+    <h1>Catálogo de Bebidas</h1>
+
+    <div id="control-section-bebidas">
+        <button onclick="mostrarFormularioAgregarBebida()">
+            <i class="fa-solid fa-plus"></i> Agregar Nueva Bebida
+        </button> 
+        
+        <br><br>
+        
+        <input type="text" placeholder="Buscar Bebida (Nombre, Precio o Categoría)...">
+        <button><i class="fa-solid fa-search"></i> Buscar</button>
+    </div>
+    
+    <table class="catalogo-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Foto</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Activo</th>
+                <th>Seleccionar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="tbBebidas">
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="author" content="Christopher,Isaac,Noe,Ximena">
+    <meta name="description" content="Proyecto">
+    <meta name="keywords" content="HTML">
+    <link href="../Style/EstiloGeneral.css" rel="stylesheet" type="text/css"/>
+</head>
+<body> 
+    
+<div id="nav-menu">
+    <label onclick="cargarAlimentos();"><i class="fa-solid fa-bowl-food"></i> Alimentos</label>
+    <label><i class="fa-solid fa-champagne-glasses"></i> Bebidas</label>
+    <label onclick="cargarCombos();"><i class="fa-solid fa-box"></i> Combos</label>
+    <label onclick="cargarSucursal();"><i class="fa-solid fa-utensils"></i> Sucursales</label>
+    <label onclick="cargarUsuarios();"><i class="fa-solid fa-person"></i> Usuario</label>
+</div>
+<a href="../index.html">
+    <img src="../Style/Img/LogoRestaurante.png" id="logo"/>
+</a>
+
+<section id="contenido"></section>
+<section id="ver"></section> 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+<script src="/JS/Sucursal.js"></script>
+<script src="/JS/Alimentos.js"></script>
+<script src="/JS/Combos.js"></script>
+<script src="/JS/Usuario.js"></script>  
+</body>
+</html>
