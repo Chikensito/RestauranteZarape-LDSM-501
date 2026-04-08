@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS producto
     nombre      VARCHAR(45) NULL,
     descripcion VARCHAR(255) NULL,
     foto        LONGTEXT NULL,
-    precio      DECIMAL(2) NULL,
+    precio      DECIMAL(10,2) NULL,
     idCategoria INT NOT NULL,
     activo      INT NOT NULL DEFAULT 1,
     CONSTRAINT  fk_producto_categoria FOREIGN KEY (idCategoria) REFERENCES categoria (idCategoria)
@@ -159,8 +159,10 @@ CREATE TABLE bebida
 CREATE TABLE IF NOT EXISTS combo 
 (
     idCombo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(45) NULL,
-    total DECIMAL(2) NOT NULL
+    nombre VARCHAR(80) NOT NULL,
+    descripcion VARCHAR(255) NULL,
+    precio DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    activo INT NOT NULL DEFAULT 1
 ) ;
 
 -- -----------------------------------------------------
@@ -168,11 +170,15 @@ CREATE TABLE IF NOT EXISTS combo
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS detalle_combo 
 (    
-    idCombo     INT NOT NULL,
-    idProducto  INT NOT NULL,
-    precio      DECIMAL(2) NOT NULL,
-    CONSTRAINT  fk_detallecombo_producto FOREIGN KEY (idProducto) REFERENCES producto (idProducto),
-    CONSTRAINT  fk_detallecombo_combo FOREIGN KEY (idCombo) REFERENCES combo (idCombo)
+    idDetalleCombo INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    idCombo        INT NOT NULL,
+    idAlimento     INT NULL,
+    idBebida       INT NULL,
+    tipoComponente VARCHAR(10) NOT NULL COMMENT 'ALIMENTO o BEBIDA',
+    precio         DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    CONSTRAINT     fk_detallecombo_combo FOREIGN KEY (idCombo) REFERENCES combo (idCombo),
+    CONSTRAINT     fk_detallecombo_alimento FOREIGN KEY (idAlimento) REFERENCES alimento (idAlimento),
+    CONSTRAINT     fk_detallecombo_bebida FOREIGN KEY (idBebida) REFERENCES bebida (idBebida)
  );
 
 -- -----------------------------------------------------
@@ -197,7 +203,7 @@ CREATE TABLE IF NOT EXISTS detalle_ticket
 (
     idTicket    INT NOT NULL,
     cantidad    INT NULL,
-    precio      DECIMAL(2) NULL, -- Precio del Producto
+    precio      DECIMAL(10,2) NULL, -- Precio del Producto
     idCombo     INT,
     idProducto  INT,
     CONSTRAINT  fk_detalle_ticket_ticket FOREIGN KEY (idTicket) REFERENCES ticket (idTicket),

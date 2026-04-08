@@ -1,54 +1,46 @@
-<link rel="stylesheet" href="../Style/EstiloBebidas.css">
-
 <section id="verBebidaForm">
-    <div>
-        <label for="txtIdBebida">ID Bebida</label>
+    <div class="campo-formulario">
+        <label for="txtIdBebida">Id bebida</label>
         <input type="number" id="txtIdBebida" readonly>
     </div>
 
-    <div>
+    <div class="campo-formulario">
         <label for="txtNombreBebida">Nombre</label>
-        <input type="text" id="txtNombreBebida" placeholder="Ej: Agua Mineral">
+        <input type="text" id="txtNombreBebida" placeholder="Ejemplo: Cafe de olla">
     </div>
 
-    <div>
-        <label for="txtDescripcionBebida">Descripción</label>
-        <input type="text" id="txtDescripcionBebida" placeholder="Ej: Agua con gas, 600ml">
+    <div class="campo-formulario campo-completo">
+        <label for="txtDescripcionBebida">Descripcion</label>
+        <input type="text" id="txtDescripcionBebida" placeholder="Ejemplo: Cafe tradicional con canela">
     </div>
 
-    <div>
+    <div class="campo-formulario">
         <label for="txtRutaFotoBebida">Foto</label>
         <input type="file" id="txtRutaFotoBebida" accept="image/*">
     </div>
 
-    <div>
+    <div class="campo-formulario">
         <label for="txtPrecioBebida">Precio</label>
         <input type="number" id="txtPrecioBebida" step="0.01" min="0" placeholder="0.00">
     </div>
 
-    <div>
-        <label for="txtCategoriaBebida">Categoría</label>
-        <input type="text" id="txtCategoriaBebida" placeholder="Ej: Aguas, Jugos, Cafés">
+    <div class="campo-formulario">
+        <label for="txtCategoriaBebida">Categoria</label>
+        <input type="text" id="txtCategoriaBebida" placeholder="Ejemplo: Cafes">
     </div>
 
-    <div>
+    <div class="campo-formulario">
         <label for="txtActivoBebida">Activo</label>
         <select id="txtActivoBebida">
-            <option value="1">Sí (Activo)</option>
-            <option value="0">No (Baja)</option>
+            <option value="1">Si</option>
+            <option value="0">No</option>
         </select>
     </div>
 
     <div class="botones">
-        <button type="button" onclick="insertarBebida();">
-            <i class="fa-solid fa-plus"></i> Insertar
-        </button>
-        <button type="button" onclick="modificarBebida();">
-            <i class="fa-solid fa-pen"></i> Modificar
-        </button>
-        <button type="button" onclick="cancelarBebida();">
-            <i class="fa-solid fa-times"></i> Cancelar
-        </button>
-       
+        <button type="button" onclick="insertarBebida();">Insertar</button>
+        <button type="button" onclick="modificarBebida();">Modificar</button>
+        <button type="button" onclick="cancelarBebida();">Cancelar</button>
+        <button type="button" onclick="eliminarBebida();">Eliminar</button>
     </div>
 </section>
