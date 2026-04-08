@@ -1,16 +1,33 @@
 <section id="combos">
-    <h2>Gestión de Combos</h2>
+    <div class="catalogo-header">
+        <div>
+            <h2>Gestion de Combos</h2>
+            <p>Permite crear paquetes con varios alimentos y varias bebidas.</p>
+        </div>
+        <button type="button" class="btn-principal" id="btnNuevoCombo">Agregar combo</button>
+    </div>
+
+    <div class="catalogo-controles">
+        <input type="text" id="txtBusquedaCombo" placeholder="Buscar por nombre, alimento o bebida">
+        <button type="button" id="btnBuscarCombo">Buscar</button>
+        <button type="button" id="btnImprimirCombos">Imprimir resultados</button>
+    </div>
+
     <table>
         <thead>
             <tr>
-                <th>Id Combo</th>
+                <th>Id combo</th>
                 <th>Nombre</th>
                 <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Alimentos</th>
+                <th>Bebidas</th>
                 <th>Estatus</th>
-                <th>Ver</th>
+                <th>Relacionados</th>
+                <th>Seleccionar</th>
                 <th>Eliminar</th>
             </tr>
         </thead>
-        <tbody id="tbAlimentos"></tbody>
+        <tbody id="tbCombos"></tbody>
     </table>
 </section>

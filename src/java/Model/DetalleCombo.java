@@ -9,17 +9,33 @@ package Model;
  * @author mauca
  */
 public class DetalleCombo {
+    private int idDetalleCombo;
     private int idCombo;
-    private int idProducto;
-    private double precio;
+    private Integer idAlimento;
+    private Integer idBebida;
+    private String tipoComponente;
+    private String nombreProducto;
+    private double precioUnitario;
 
     public DetalleCombo() {
     }
 
-    public DetalleCombo(int idCombo, int idProducto, double precio) {
+    public DetalleCombo(int idDetalleCombo, int idCombo, Integer idAlimento, Integer idBebida, String tipoComponente, String nombreProducto, double precioUnitario) {
+        this.idDetalleCombo = idDetalleCombo;
         this.idCombo = idCombo;
-        this.idProducto = idProducto;
-        this.precio = precio;
+        this.idAlimento = idAlimento;
+        this.idBebida = idBebida;
+        this.tipoComponente = tipoComponente;
+        this.nombreProducto = nombreProducto;
+        this.precioUnitario = precioUnitario;
+    }
+
+    public int getIdDetalleCombo() {
+        return idDetalleCombo;
+    }
+
+    public void setIdDetalleCombo(int idDetalleCombo) {
+        this.idDetalleCombo = idDetalleCombo;
     }
 
     public int getIdCombo() {
@@ -30,26 +46,48 @@ public class DetalleCombo {
         this.idCombo = idCombo;
     }
 
-    public int getIdProducto() {
-        return idProducto;
+    public Integer getIdAlimento() {
+        return idAlimento;
     }
 
-    public void setIdProducto(int idProducto) {
-        this.idProducto = idProducto;
+    public void setIdAlimento(Integer idAlimento) {
+        this.idAlimento = idAlimento;
     }
 
-    public double getPrecio() {
-        return precio;
+    public Integer getIdBebida() {
+        return idBebida;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setIdBebida(Integer idBebida) {
+        this.idBebida = idBebida;
+    }
+
+    public String getTipoComponente() {
+        return tipoComponente;
+    }
+
+    public void setTipoComponente(String tipoComponente) {
+        this.tipoComponente = tipoComponente;
+    }
+
+    public String getNombreProducto() {
+        return nombreProducto;
+    }
+
+    public void setNombreProducto(String nombreProducto) {
+        this.nombreProducto = nombreProducto;
+    }
+
+    public double getPrecioUnitario() {
+        return precioUnitario;
+    }
+
+    public void setPrecioUnitario(double precioUnitario) {
+        this.precioUnitario = precioUnitario;
     }
 
     @Override
     public String toString() {
-        return "DetalleCombo{" + "idCombo=" + idCombo + ", idProducto=" + idProducto + ", precio=" + precio + '}';
+        return "DetalleCombo{" + "idDetalleCombo=" + idDetalleCombo + ", idCombo=" + idCombo + ", idAlimento=" + idAlimento + ", idBebida=" + idBebida + ", tipoComponente=" + tipoComponente + ", nombreProducto=" + nombreProducto + ", precioUnitario=" + precioUnitario + '}';
     }
-    
-    
 }
