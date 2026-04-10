@@ -1,33 +1,27 @@
-<div class="container">
-    
-    <h1>Catálogo de Bebidas</h1>
-
-    <div id="control-section-bebidas">
-        <button onclick="mostrarFormularioAgregarBebida()">
-            <i class="fa-solid fa-plus"></i> Agregar Nueva Bebida
-        </button> 
-        
-        <br><br>
-        
-        <input type="text" placeholder="Buscar Bebida (Nombre, Precio o Categoría)...">
-        <button><i class="fa-solid fa-search"></i> Buscar</button>
+<section id="bebidas">
+    <div class="catalogo-header">
+        <div>
+            <h2>Catalogo de Bebidas</h2>
+            <p>Estos registros tambien alimentan la configuracion del combo.</p>
+        </div>
+        <button type="button" class="btn-principal" id="btnNuevoBebida">Agregar bebida</button>
     </div>
-    
-    <table class="catalogo-table">
+
+    <table>
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Id bebida</th>
+                <th>Id producto</th>
                 <th>Nombre</th>
-                <th>Descripción</th>
+                <th>Descripcion</th>
                 <th>Foto</th>
                 <th>Precio</th>
-                <th>Categoría</th>
+                <th>Categoria</th>
                 <th>Activo</th>
                 <th>Seleccionar</th>
                 <th>Eliminar</th>
             </tr>
         </thead>
-        <tbody id="tbBebidas">
-        </tbody>
+        <tbody id="tbBebidas"></tbody>
     </table>
-</div>
+</section>

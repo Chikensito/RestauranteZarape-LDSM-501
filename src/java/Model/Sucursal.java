@@ -1,14 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Model;
 
 /**
  *
- * @author mauca
+ * @author rayas
  */
+
+// 1.DECLARACIÓN DE LA CLASE
 public class Sucursal {
+    
+    // 2.DECLARACIÓN DE ATRIBUTOS
     private int idSucursal;
     private String nombre;
     private String latitud;
@@ -19,13 +19,16 @@ public class Sucursal {
     private String calle;
     private String numCalle;
     private String colonia;
-    private int idCiudad;
+    private Ciudad ciudad;
     private int activo;
 
+    // 3.DECLARACIÓN DE CONSTRUCTORES
+    // 3.1 CONSTRUCTOR VACÍO
     public Sucursal() {
     }
 
-    public Sucursal(int idSucursal, String nombre, String latitud, String longitud, String foto, String urlWeb, String horarios, String calle, String numCalle, String colonia, int idCiudad, int activo) {
+    // 3.2 CONSTRUCTOR CARGADO
+    public Sucursal(int idSucursal, String nombre, String latitud, String longitud, String foto, String urlWeb, String horarios, String calle, String numCalle, String colonia, Ciudad ciudad, int activo) {
         this.idSucursal = idSucursal;
         this.nombre = nombre;
         this.latitud = latitud;
@@ -36,7 +39,16 @@ public class Sucursal {
         this.calle = calle;
         this.numCalle = numCalle;
         this.colonia = colonia;
-        this.idCiudad = idCiudad;
+        this.ciudad = ciudad;
+        this.activo = activo;
+    }
+
+    // 4.DECLARACIÓN DE MÉTODOS GET AND SET
+    public int getActivo() {
+        return activo;
+    }
+
+    public void setActivo(int activo) {
         this.activo = activo;
     }
 
@@ -120,27 +132,12 @@ public class Sucursal {
         this.colonia = colonia;
     }
 
-    public int getIdCiudad() {
-        return idCiudad;
+    public Ciudad getCiudad() {
+        return ciudad;
     }
 
-    public void setIdCiudad(int idCiudad) {
-        this.idCiudad = idCiudad;
+    public void setCiudad(Ciudad ciudad) {
+        this.ciudad = ciudad;
     }
-
-    public int getActivo() {
-        return activo;
-    }
-
-    public void setActivo(int activo) {
-        this.activo = activo;
-    }
-
-    @Override
-    public String toString() {
-        return "Sucursal{" + "idSucursal=" + idSucursal + ", nombre=" + nombre + ", latitud=" + latitud + ", longitud=" + longitud + ", foto=" + foto + ", urlWeb=" + urlWeb + ", horarios=" + horarios + ", calle=" + calle + ", numCalle=" + numCalle + ", colonia=" + colonia + ", idCiudad=" + idCiudad + ", activo=" + activo + '}';
-    }
-
-    
     
 }

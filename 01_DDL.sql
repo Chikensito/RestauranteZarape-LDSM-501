@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS sucursal
     activo        INT NOT NULL DEFAULT 1,
     CONSTRAINT fk_sucursal_ciudad FOREIGN KEY (idCiudad) REFERENCES ciudad(idCiudad)
 ) ;
-
+SELECT *FROM sucursal;
 -- -----------------------------------------------------
 -- Table persona
 -- -----------------------------------------------------
@@ -64,6 +64,7 @@ CREATE TABLE IF NOT EXISTS usuario
     contrasenia VARCHAR(65) NULL,
     activo      INT NOT NULL DEFAULT 1
 ) ;
+INSERT INTO usuario VALUES(1,"Christopher","12345","1");
 
 -- -----------------------------------------------------
 -- Table empleado

@@ -8,7 +8,7 @@ body {
     min-height: 100vh;
 }
 
-div {
+.login-container {
     background-color: #BBCF4A;
     padding: 40px;
     border-radius: 15px;
@@ -20,22 +20,22 @@ div {
     gap: 15px;
 }
 
-div img {
+.login-container img {
     width: 90%;
     max-width: 280px;
     height: auto;
     margin: 0 auto 20px auto;
 }
 
-label {
+.login-container label {
     color: #A11F0C;
     font-weight: bold;
     text-align: left;
     margin-top: 5px;
 }
 
-input[type="text"], 
-input[type="password"] {
+.login-container input[type="text"], 
+.login-container input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 2px solid #A11F0C;
@@ -43,7 +43,7 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-button {
+.btn-login {
     background-color: #E73F0B;
     color: white;
     padding: 12px 20px;
@@ -56,6 +56,6 @@ button {
     margin-top: 15px;
 }
 
-button:hover {
+.btn-login:hover {
     background-color: #A11F0C;
 }
